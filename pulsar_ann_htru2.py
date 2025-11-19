@@ -104,3 +104,12 @@ model_naive = Sequential([
     Dense(16, activation='relu'),
     Dense(1, activation='sigmoid')
 ])
+
+history_naive = model_naive.fit(
+    X_train, y_train,
+    epochs=20,
+    batch_size=32,
+    validation_split=0.1,
+    callbacks=[EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)],
+    verbose=1
+)
