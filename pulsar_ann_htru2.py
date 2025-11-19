@@ -168,3 +168,18 @@ history_optimized = model_optimized.fit(
 y_pred_prob_optimized = model_optimized.predict(X_test)
 y_pred_optimized = (y_pred_prob_optimized > 0.5).astype(int)
 print("--- Model 3 Trained ---")
+
+# 6. FINAL RESULTS AND COMPARISON///
+print("\n" + "="*50)
+print("           FINAL MODEL COMPARISON")
+print("="*50 + "\n")
+
+target_names = ['Class 0 (Non-Pulsar)', 'Class 1 (Pulsar)']
+print("--- Model 1: ANN Baseline ---")
+print(classification_report(y_test, y_pred_baseline, target_names=target_names))
+
+print("\n--- Model 2: 'Naive' MLP (Deeper) ---")
+print(classification_report(y_test, y_pred_naive, target_names=target_names))
+
+print("\n--- Model 3: 'Optimized' MLP (with Class Weighting) ---")
+print(classification_report(y_test, y_pred_optimized, target_names=target_names))
