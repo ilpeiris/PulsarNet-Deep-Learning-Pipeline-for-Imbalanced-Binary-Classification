@@ -37,7 +37,7 @@ This project avoids that **Accuracy Trap** and focuses on correctly identifying 
 
 ### 📊 Class Imbalance (Figure 1)
 
-![Class Imbalance](figures/class_distribution.png)
+![Class Imbalance](figures/Class%20Distribution.png)
 
 ---
 
@@ -84,7 +84,7 @@ Key techniques:
 
 #### 🔧 Architecture Diagram (Figure 2)
 
-![Model Architecture](figures/model_architecture.png)
+![Model Architecture](figures/Model%20Architecture%20Diagram.png)
 
 ---
 
@@ -92,15 +92,15 @@ Key techniques:
 
 ### 🔬 Correlation Matrix (Figure 3)
 
-![Feature Correlation Matrix](figures/feature_correlation_matrix.png)
+![Feature Correlation Matrix](figures/Feature%20Correlation%20Matrix.png)
 
 ### 📉 Loss & Accuracy Curves (Figure 4)
 
-![Loss and Accuracy](figures/Model_Loss-Accuracy.png)
+![Loss and Accuracy](figures/Model%20Loss-Accuracy.png)
 
 ### 🧩 Confusion Matrices (Figure 5)
 
-![Confusion Matrices](figures/confusion_matrices.png)
+![Confusion Matrices](figures/Confusion%20Matrices.png)
 
 ---
 
