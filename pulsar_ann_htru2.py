@@ -183,3 +183,23 @@ print(classification_report(y_test, y_pred_naive, target_names=target_names))
 
 print("\n--- Model 3: 'Optimized' MLP (with Class Weighting) ---")
 print(classification_report(y_test, y_pred_optimized, target_names=target_names))
+
+# Plot Confusion Matrices
+models = {
+    "ANN Baseline (Model 1)": y_pred_baseline,
+    "'Naive' MLP (Model 2)": y_pred_naive,
+    "'Optimized' MLP (Model 3)": y_pred_optimized
+}
+
+plt.figure(figsize=(20, 5))
+for i, (name, y_pred) in enumerate(models.items()):
+    plt.subplot(1, 3, i+1)
+    cm = confusion_matrix(y_test, y_pred)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=target_names, yticklabels=target_names)
+    plt.title(f"Confusion Matrix: {name}")
+    plt.xlabel("Predicted Label")
+    plt.ylabel("True Label")
+
+plt.tight_layout()
+plt.show()
