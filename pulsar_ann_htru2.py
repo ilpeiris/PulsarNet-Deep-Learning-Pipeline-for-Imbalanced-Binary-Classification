@@ -70,3 +70,12 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 print("\n--- Data Preprocessing Complete ---")
+
+
+# 3. MODEL 1: ANN BASELINE  ///////
+print("\n--- Training Model 1: ANN Baseline (Simple MLP) ---")
+
+model_baseline = Sequential([
+    Dense(8, activation='relu', input_shape=(X_train.shape[1],)),
+    Dense(1, activation='sigmoid')
+])
