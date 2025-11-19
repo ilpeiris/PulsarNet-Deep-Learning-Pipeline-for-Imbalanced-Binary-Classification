@@ -53,7 +53,23 @@ except Exception as e:
 print("\nClass Distribution:")
 print(df['target_class'].value_counts())
 
+# /// NEW - Data Exploration Visuals (
+# Class Imbalance Bar Chart
+plt.figure(figsize=(6, 4))
+sns.countplot(x='target_class', data=df, hue='target_class', palette='viridis', legend=False)
+plt.title('Class Distribution: Non-Pulsar (0) vs Pulsar (1)')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.xticks([0, 1], ['Non-Pulsar', 'Pulsar'])
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
 
+# Feature Correlation Heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5)
+plt.title('Feature Correlation Matrix')
+plt.show()
+# ---
 
 # ---
 # Data Preparation for Models
