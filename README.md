@@ -1,4 +1,9 @@
 # 🌌 Robust Pulsar Candidate Classification using Optimized ANNs
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-orange)
+![Status](https://img.shields.io/badge/Status-Completed-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 
 This repository hosts a production-grade, end-to-end **Deep Learning data pipeline** engineered to detect rare *pulsar candidates* within the benchmark **UCI HTRU2 radio astronomy dataset**.
 
