@@ -60,7 +60,7 @@ The pipeline extracts 8 continuous, high-dimensional statistical metrics calcula
 
 ### Pipeline Automation
 
-Instead of demanding static local file positioning, the ingestion engine establishes an automated network hook pulling straight from the UCI ML Repository[cite: 4, 5]. It programmatically opens the zip file using `urllib.request`, decompresses the binary stream via `io.BytesIO` and `zipfile`, maps structural features, and implements automated feature standardization using Scikit-learn's `StandardScaler`[cite: 4, 5].
+Instead of demanding static local file positioning, the ingestion engine establishes an automated network hook pulling straight from the UCI ML Repository. It programmatically opens the zip file using `urllib.request`, decompresses the binary stream via `io.BytesIO` and `zipfile`, maps structural features, and implements automated feature standardization using Scikit-learn's `StandardScaler`.
 
 #### 🔬 Feature Correlation Matrix (Figure 3)
 ![Feature Correlation Matrix](figures/Feature%20Correlation%20Matrix.png)
@@ -97,7 +97,36 @@ All structural layers are built via **TensorFlow / Keras** and compiled using id
 ![Model Architecture](figures/Model%20Architecture%20Diagram.png)
 
 ---
+## ⚙️ Under The Hood: Engineering Architecture & Math
 
+This pipeline is constructed using a modern, production-grade data engineering and deep learning stack, separated into three distinct phases:
+
+### 1. Automated Ingestion & Data Engineering
+* **In-Memory Streaming:** Bypasses local storage by utilizing `urllib.request` to hook into the remote UCI server, decompressing the binary payload entirely in RAM via `io.BytesIO` and `zipfile` before mapping to a Pandas DataFrame.
+* **Feature Standardization:** Employs Scikit-Learn’s `StandardScaler` to calculate standard distributions, centering the high-dimensional array to a mean of 0 and standard deviation of 1 for neural stability.
+
+### 2. Core MLP Architecture (Deep Learning)
+The optimized Sequential Keras model uses a tapered deep configuration to capture complex geometric boundaries:
+* **Dense Hidden Layers:** Utilizes 64-unit and 32-unit layers driven by non-linear **ReLU** (Rectified Linear Unit) activation functions.
+* **Dropout Regularization:** Injects `0.3` Dropout layers between dense connections, intentionally disabling 30% of random neurons per pass to eliminate co-adaptation and prevent the network from memorizing systemic noise.
+* **Probabilistic Output:** A final single-unit dense layer driven by a **Sigmoid** activation function compresses network weights into a clean mathematical probability between `0.0` and `1.0`.
+
+### 3. The Math Optimization Engine
+* **Compilation Stack:** Compiled via TensorFlow using **Binary Crossentropy** alongside the **Adam Optimizer** (an adaptive learning rate engine) and a batch size of 32.
+* **Algorithmic Class Weighting:** Utilizes Scikit-Learn’s `compute_class_weight` to calculate inverse frequency distributions, generating a dynamic dictionary payload passed directly to `model.fit()`. This forces the crossentropy calculus to penalize mistakes on the minority class 9.9 times more heavily than the majority class.
+
+---
+
+## 🌍 Commercial Applications (Beyond Astrophysics)
+
+While this architecture is configured for radio astronomy, the mathematical framework solves one of the most difficult challenges in enterprise computer science: **Extreme Class Imbalance**. 
+
+By successfully defeating the "accuracy trap" and prioritizing minority-class recall, this exact pipeline architecture maps directly to high-value commercial tech domains:
+* **Financial Fraud & Risk Isolation:** Spotting illegal credit card transactions buried inside millions of normal payments (where missing a fraud anomaly is devastating).
+* **Cybersecurity Intrusion Detection:** Analyzing network packet header captures to flag malicious cyber threat signatures masked inside petabytes of benign web traffic.
+* **Medical Diagnostic Imaging:** Building high-recall computer vision networks to find incredibly rare malignant tumors from thousands of healthy biopsy readings.
+
+---
 ## 📊 Benchmarked Experimental Results
 
 Evaluation scores generated against the unseen 20% stratified test set (`3,580` total instances; `3,252` non-pulsars, `328` pulsars):
