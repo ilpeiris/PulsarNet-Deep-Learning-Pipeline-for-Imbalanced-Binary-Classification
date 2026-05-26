@@ -5,7 +5,7 @@
 ![Keras](https://img.shields.io/badge/Keras-3.x-D00000?style=flat-square&logo=keras&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-2.2.2-150458?style=flat-square&logo=pandas&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)
 
 > A TensorFlow/Keras deep learning pipeline for pulsar candidate classification on the real-world **HTRU2 dataset** (17,898 samples, 9.9:1 class imbalance). Implements three MLP architectures in a controlled ablation study demonstrating the **accuracy trap** on imbalanced data and resolving it via class-weighted loss functions, dropout regularisation, and decision threshold tuning.
@@ -479,6 +479,12 @@ In every case the mathematical structure is identical to pulsar classification: 
 - UCI ML Repository: https://archive.ics.uci.edu/ml/datasets/htru2
 
 ---
+
+## Author
+
+**Isuru Lakmal Peiris**
+GitHub: [@ilpeiris](https://github.com/ilpeiris)
+LinkedIn: [linkedin.com/in/ilpeiris](https://linkedin.com/in/ilpeiris)
 
 ## License
 
