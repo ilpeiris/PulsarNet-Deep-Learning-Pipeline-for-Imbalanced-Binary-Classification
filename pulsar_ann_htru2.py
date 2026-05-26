@@ -1,3 +1,11 @@
+# =============================================================
+# PulsarNet — Deep Learning Pipeline for Imbalanced Binary Classification
+# Author:  Isuru Lakmal Peiris
+# GitHub:  github.com/ilpeiris
+# License: Apache 2.0
+# =============================================================
+
+
 # 1. IMPORT LIBRARIES & SET SEEDS ///
 import pandas as pd
 import numpy as np
