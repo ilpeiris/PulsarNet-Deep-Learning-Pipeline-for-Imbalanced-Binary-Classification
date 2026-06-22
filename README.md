@@ -8,12 +8,15 @@
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)
 
+This is a binary classification system that detects real pulsars (rotating neutron stars) from radio telescope noise using an Artificial Neural Network (ANN).
 
 <p align="center">
   <img src="https://imageio.forbes.com/blogs-images/startswithabang/files/2016/11/0-iLlaX3AJ8KS97jFA.jpg?height=349&width=711&fit=bounds"
        alt="PulsarNet Banner"
        width="900">
 </p>
+
+
 
 > A TensorFlow/Keras deep learning pipeline for pulsar candidate classification on the real-world **HTRU2 dataset** (17,898 samples, 9.9:1 class imbalance). Implements three MLP architectures in a controlled ablation study demonstrating the **accuracy trap** on imbalanced data and resolving it via class-weighted loss functions, dropout regularisation, and decision threshold tuning.
 
